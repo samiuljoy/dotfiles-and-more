@@ -1,6 +1,18 @@
+echo "\n\t\t\t\t>>>>>> Welcome! Ready to try out my dotfiles? <<<<<<"
+echo "\nYou could either download the required packages automatically with this installation which would require you to have root privilege, or you could run the installer as a non-root user."
+read -p "Run this installer as a non-root or root? Type in 'nonroot' for running as non-root user, or type in 'asroot' to run it as a root user(without the quotes) " rootorno
+case "$rootorno" in
+	"aroot") echo "\nRunning this installer as a root user"
+		sh requirements.sh
+		;;
+	"nonroot") echo "\nRunning this installer as a non-root user"
+		;;
+esac
+sleep 0.5
+echo "\nProceeding forward..."
+sleep 0.5
 cur_dir="$(dirname "$0")"
 . $cur_dir/functions.sh
-echo "\n\t\t\t\t>>>>>> Welcome! Ready to try out my dotfiles? <<<<<<"
 echo "\n\n\tChose your preferred config/s"
 echo "\n\t1. vimrc config"
 echo "\n\t2. bashrc config"
@@ -50,7 +62,7 @@ case "$email" in
 esac
 
 case "$xfcec" in
-	"5") xfce_colo_setup
+	"5") xfce_setup
 		;;
 	"s") echo "\nskipping xfce terminal color setup"
 		;;
@@ -72,10 +84,6 @@ echo "\n\nFor gtk settings"
 echo "\n\nYou probably need to replace the gtk settings from this directory under gtk-3.0/settings.ini to your $HOME/.config/gtk-3.0/settings.ini"
 echo "\n\nNote that these gtk configs are for gtk-3.0, if you have gtk-version other than 3.0, might have to google a bit, I would suggest Arch wiki."
 echo "It's better if you copied the settings.ini yourself."
-
-sleep 0.5
-echo "\n\nThe font Fira Code can be installed using apt install fonts-firacode"
-echo
 
 sleep 0.5
 echo "\n\nSettings complete I guess. Do a reboot to see changes."

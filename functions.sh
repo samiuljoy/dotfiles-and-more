@@ -74,8 +74,25 @@ sleep 1
 
 
 vim_col() {
-	echo "\n\tA note about vim-colorscheme"
-	echo "\nYou need to copy the vim colorschemes in vim-colors manually to /usr/share/vim/vim*/colors/ since root privilege is required to make changes to system files."
+	if [ $(which vim) = "/usr/bin/vim" ]; then
+		echo "\nConfiguring vim colors"
+			if [ $(id -u) = 0]; then
+				chmod 0755 vim-colors/*
+				echo "\nCopying vim colors to /usr/share/vim/vim*/colors/"
+				cp vim-colors/* /usr/share/vim/vim*/colors/
+				if [ $? == 0 ]; then
+					echo "\nVim colors copied successfully"
+				else
+					echo "\nSomething went wrong while copying vim colors to /us"
+				fi
+				echo "\nColors successfully copied"
+			else
+				echo "\n\tA note about vim-colorscheme"
+				echo "\nYou need to copy the vim colorschemes in vim-colors manually to /usr/share/vim/vim*/colors/ since root privilege is required to make changes to system files."
+			fi
+		else
+			echo "Vim is not installed on your system, you can install vim using apt install vim"
+	fi
 sleep 0.5
 }
 
@@ -90,14 +107,39 @@ sleep 0.5
 }
 
 
-xfce_colo_setup() {
-	echo "\n\tA note about xfce4-terminal colorschemes"
-	echo "\nConfiguring xfce4-terminal colorschme"
+xfce_setup() {
+	echo "\n\tConfiguring xfce4-terminal setup"
 	if [ $(which xfce4-terminal) = "/usr/bin/xfce4-terminal" ]; then
-		echo "\nYou need to copy the colorschmes for xfce4-terminal manually from xfce4-colors/ to /usr/share/xfce4/terminal/colorschemes/ because root privilege is needed for modifying system files" 
-		sleep 0.5
+		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
+		case "$xfrcon" in
+			"y") cat xfce4/terminalrc > $HOME/.config/xfce4/terminal/terminalrc
+				if [ $? == 0 ]; then
+					echo "\nTerminalrc replaced successfully"
+				else
+					echo "Something went wrong while replacing terminalrc"
+				fi
+				;;
+			"n") echo "\nTerminalrc left untouched"
+				;;
+			*) echo "Invalid input"
+				exit 1
+				;;
+		esac
+		if [ $(id -u) = 0 ]; then
+			chmod 0755 xfce4/xfce4-colors/*
+			echo "\nCopying xfce4-colors"
+			cp xfce4/xfce4-colors/* /usr/share/xfce4/terminal/colorschemes/
+			if [ $? == 0 ]; then
+				echo "\nColors successfully copied"
+			else
+				echo "\nSomething went wrong...continuing rest of the setup though"
+			fi
+		else
+			echo "\n\tNote about xfce4-terminal colorschemes"
+			echo "\nYou need to copy the colorschmes for xfce4-terminal manually from xfce4-colors/ to /usr/share/xfce4/terminal/colorschemes/ because root privilege is needed for modifying system files" 
+		fi
 	else
-		echo "\nxfce4-terminal isn't installed on your system"
+		echo "\nXfce4-terminal is not installed on your system"
 	fi
 sleep 0.5
 }
@@ -108,7 +150,7 @@ i3_config() {
 	if [ $(which i3) = "/usr/bin/i3" ]; then
 		if [ -f "$HOME/.config/i3/config" ]; then
 			echo
-			read -p "A config file for i3 already exist on your home directory/i3/config, do you want to replace it? [y or n] " iwm
+			read -p "A config file for i3 already exist on your home $HOME/.config/i3/config, do you want to replace it? [y or n] " iwm
 			case "$iwm" in
 				"y") cat i3/config > $HOME/.config/i3/config
 					echo "\ni3 configs replaced"

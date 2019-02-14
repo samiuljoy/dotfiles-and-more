@@ -104,7 +104,7 @@ n. Take screenshots with <Print> key on your keyboard
 
 ### Stuffs in `$HOME.config/mutt/muttrc`
 
-Mutt is an email client. Make sure to lock store your password in a different file and encrypt it with gpg key. This might be helpful
+Mutt is an email client. Make sure to lock store your password in a different file and encrypt it with gpg key. There's also a gruvbox colorschme included.
 
 ### Custom colorschemes for vim
 
