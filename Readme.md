@@ -8,6 +8,8 @@ Pretty basic and minimalist configs.
 
 ![Small Terminal](screenshots/small-term.png)
 
+![Dmenu prompt](screenshots/dmenu-prompt.png)
+
 ![Large Terminal](screenshots/large-term.png)
 
 ![Markdown file with vim and miramare colorscheme](screenshots/markdown-and-mini.png)
@@ -56,7 +58,7 @@ e. Page down with space
 
 f. Miscellaneous: syntax is enabled, laststatus is set to 0, termguicolors is enabled, noswapfile is set, background is set to dark, relativenumber and numbers are on, and cursorline in set to true, which highlights the line you're currently on.
 
-g. ALthough optional, if you're not using w and q for their defined actions, you can map them to save and quit, just uncomment line 5 and 6, save vimrc. Now, you can exit vim with q and save with w. Easy as that.
+g. Although optional, if you're not using w and q for their defined actions, you can map them to save and quit, just uncomment line 5 and 6, save vimrc. Now, you can exit vim with q and save with w. Easy as that.
 
 ### Stuffs in `.bashrc and bash_aliases`
 
@@ -64,7 +66,7 @@ a. A few of aliases and color profiles in .bash_aliases for specific file format
 
 b. A cs function at the end. Type in `cs directory` and it'll cd to that directory and list out its contents
 
-### What I have in gtk-3.0/
+### In gtk-3.0/
 
 If you're using i3, font's by default don't have antialiased and hinting enabled and gui applications open in default bright themes, hence, to enable dark colorschme and antialising and hinting, these settings have been included. You'll have to manually place the settings under $HOME/.config/gtk-3.0/settings.ini.
 
@@ -80,7 +82,7 @@ c. Default terminal is set to xfce-terminal
 
 d. alt+home opens firefox on workspace 2
 
-e. Kill a window with alt+4
+e. Kill a window with alt+f4
 
 f. alt+f starts thunar file manager in floating mode
 
@@ -100,7 +102,7 @@ m. Open applications like thunar light, firefox, parole etc in their customized 
 
 n. Take screenshots with <Print> key on your keyboard
 
-### Stuffs in `.config/mutt/muttrc`
+### Stuffs in `$HOME.config/mutt/muttrc`
 
 Mutt is an email client. Make sure to lock store your password in a different file and encrypt it with gpg key. This might be helpful
 
@@ -114,7 +116,7 @@ Fira Code Medium is the font I'm currently using.
 
 ### Xfce4-terminal colorschme
 
-Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up using Nord.
+Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up using Nord. The colorschemes are under xfce4-colors/
 
 ## Setting Everything up
 
@@ -132,7 +134,7 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 
 7. Replace the vim colorschemes from vim-colors/ to /usr/share/vim/vim\*/colors/
 
-8. Downlaod font-fira-code with `apt install fonts-firacode` or head over to https://packages.debian.org and download from there, whatever suits you.
+8. Downlaod font-fira-code with `apt install fonts-firacode` or head over to https://packages.debian.org/search?keywords=fonts-firacode and download from there, whatever suits you.
 
 9. If you're using xfce4-terminal, you can replace the colorschemes from xfce4-colors eg: nord.theme under /usr/share/xfce4/terminal/colorschemes/
 
