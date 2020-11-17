@@ -46,7 +46,7 @@ Pretty basic and minimalist configs.
 
 I'm using pathogen as my plugin manager. Using this vimrc, you get;
 
-a. Default Vim colorschme is set to substrata
+a. Default Vim colorschme is set to substrata(remember to copy vim-colors/substrata.vim to /usr/share/vim/vim\*/colors/)
 
 c. Turn on spell check with spy(in escape mode) and turn off spell check using spn(in esc mode)
 
