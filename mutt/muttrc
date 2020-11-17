@@ -1,0 +1,21 @@
+source $HOME/.config/mutt/colors-gruvbox-shuber.muttrc
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+set folder = "imaps://your.imap.address"
+
+set from = "youremail@mail.com"
+set realname = 'Your name'
+
+set imap_user = 'your imap user email'
+set imap_pass="your password"
+
+set smtp_url = 'smtps://your.smtp.address'
+set smtp_pass="your password"
+
+set timeout=10
+
+set sort="reverse-date-received"
+set editor=vi
+set hostname="your email host name"
+set spoolfile = "+INBOX"
