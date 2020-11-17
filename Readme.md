@@ -52,7 +52,7 @@ a. Default Vim colorschme is set to substrata(remember to copy vim-colors/substr
 
 c. Turn on spell check with spy(in escape mode) and turn off spell check using spn(in esc mode)
 
-d. Spell check is turned on automatically for markdown files or files having `.md` extension and default colorschme for markdown files is set to gruvbox-material
+d. Spell check is turned on automatically for markdown files or files having `.md` extension and default colorschme for markdown files is set to miramare
 
 e. Page down with space
 
@@ -108,7 +108,7 @@ Mutt is an email client. Make sure to lock store your password in a different fi
 
 ### Custom colorschemes for vim
 
-This here are some custom colorschemes for vim. Gruvbox, Substrata, Iceberg, Gruvbox-material, Miramare
+This here are some custom colorschemes for vim. Gruvbox, Substrata, Iceberg, Miramare
 
 ### System-wide Font I used
 
