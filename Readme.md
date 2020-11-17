@@ -40,6 +40,8 @@ Pretty basic and minimalist configs.
 
 8. **Xfce4-terminal colorschemes** = Nord, Gruvbox
 
+9. **Debian Joy Theme wallpapers included under joy-theme-debian** 
+
 ### In `.vimrc`
 
 I'm using pathogen as my plugin manager. Using this vimrc, you get;
