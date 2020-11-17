@@ -136,4 +136,4 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 
 ### Automatic setup
 
-Just run this script. Clone the repo, cd into dotfiles/ and run setup.sh. Some of the steps require you to have administrative privilege and is left for you to install manually.
+Just run this script. Clone the repo, cd into dotfiles-and-more/ and run setup.sh. Some of the steps require you to have administrative privilege and is left for you to install manually.
