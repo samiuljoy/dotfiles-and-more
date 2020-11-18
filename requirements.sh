@@ -86,5 +86,5 @@ case "$firaa" in
 
 
 else
-	echo "You need to have root privilege to install packages"
+	echo "\nSeems like you dont have root privilege. You need to have root privilege to install packages"
 fi

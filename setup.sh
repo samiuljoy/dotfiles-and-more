@@ -1,8 +1,12 @@
 echo "\n\t\t\t\t>>>>>> Welcome! Ready to try out my dotfiles? <<<<<<"
 echo "\nYou could either download the required packages automatically with this installation which would require you to have root privilege, or you could run the installer as a non-root user."
-read -p "Run this installer as a non-root or root? Type in 'nonroot' for running as non-root user, or type in 'asroot' to run it as a root user(without the quotes) " rootorno
+echo
+echo "Run this installer as a non-root or root? Type in 'nonroot' for running as non-root user, or type in 'asroot' to run it as a root user(without the quotes) "
+echo
+# I could've used positional arguments, but using variables seems fun (:
+read -p "[nonroot or asroot]: " rootorno
 case "$rootorno" in
-	"aroot") echo "\nRunning this installer as a root user"
+	"asroot") echo "\nRunning this installer as a root user"
 		sh requirements.sh
 		;;
 	"nonroot") echo "\nRunning this installer as a non-root user"
@@ -81,8 +85,8 @@ esac
 
 sleep 0.5
 echo "\n\nFor gtk settings"
-echo "\n\nYou probably need to replace the gtk settings from this directory under gtk-3.0/settings.ini to your $HOME/.config/gtk-3.0/settings.ini"
-echo "\n\nNote that these gtk configs are for gtk-3.0, if you have gtk-version other than 3.0, might have to google a bit, I would suggest Arch wiki."
+echo "\nYou probably need to replace the gtk settings from this directory under gtk-3.0/settings.ini to your $HOME/.config/gtk-3.0/settings.ini"
+echo "\nNote that these gtk configs are for gtk-3.0, if you have gtk-version other than 3.0, might have to google a bit, I would suggest Arch wiki."
 echo "It's better if you copied the settings.ini yourself."
 
 sleep 0.5

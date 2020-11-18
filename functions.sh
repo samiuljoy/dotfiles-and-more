@@ -76,7 +76,7 @@ sleep 1
 vim_col() {
 	if [ $(which vim) = "/usr/bin/vim" ]; then
 		echo "\nConfiguring vim colors"
-			if [ $(id -u) = 0]; then
+			if [ $(id -u) = 0 ]; then
 				chmod 0755 vim-colors/*
 				echo "\nCopying vim colors to /usr/share/vim/vim*/colors/"
 				cp vim-colors/* /usr/share/vim/vim*/colors/
@@ -110,6 +110,7 @@ sleep 0.5
 xfce_setup() {
 	echo "\n\tConfiguring xfce4-terminal setup"
 	if [ $(which xfce4-terminal) = "/usr/bin/xfce4-terminal" ]; then
+		echo
 		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
 		case "$xfrcon" in
 			"y") cat xfce4/terminalrc > $HOME/.config/xfce4/terminal/terminalrc
