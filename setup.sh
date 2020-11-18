@@ -10,9 +10,9 @@ case "$rootorno" in
 esac
 sleep 0.5
 echo "\nProceeding forward..."
-sleep 0.5
 cur_dir="$(dirname "$0")"
 . $cur_dir/functions.sh
+sleep 0.5
 echo "\n\n\tChose your preferred config/s"
 echo "\n\t1. vimrc config"
 echo "\n\t2. bashrc config"
