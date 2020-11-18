@@ -36,11 +36,11 @@ Pretty basic and minimalist configs.
 
 5. **mutt/muttrc** = Mutt email client configs
 
-6. **Custom colorschemes for vim** = gruvbox, miramare, iceberg, substrata
+6. **Custom colorschemes for vim** = ![gruvbox](https://github.com/morhetz/gruvbox), ![miramare](https://github.com/franbach/miramare), ![iceberg](https://github.com/cocopon/iceberg.vim), ![substrata](https://github.com/arzg/vim-substrata)
 
 7. **System-wide font used** = Fira Code Medium
 
-8. **Xfce4-terminal colorschemes** = Nord, Gruvbox
+8. **Xfce4-terminal colorschemes** = ![Nord](https://github.com/arcticicestudio/nord-xfce-terminal), ![Gruvbox](https://gist.github.com/tsbarnes/76724165773e834ea90c), Nord-dark
 
 9. **Debian Joy Theme wallpapers included under joy-theme-debian** 
 
@@ -116,7 +116,7 @@ Fira Code Medium is the font I'm currently using.
 
 ### Xfce4-terminal colorschme
 
-Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up using Nord. The colorschemes are under xfce4-colors/
+Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up using Nord. The colorschemes are under xfce4/xfce4-colors/
 
 ## Setting Everything up
 
