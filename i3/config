@@ -43,15 +43,18 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec --no-startup-id xfce4-terminal
 bindsym $alt+Home exec --no-startup-id $HOME/firefox/firefox
+bindsym $alt+l exec --no-startup-id $HOME/light/light
+bindsym $alt+g exec xfce4-terminal -T ranger -e ranger
 # bindsym $alt+F2 exec --no-startup-id xfce4-appfinder -c
 bindsym Print exec --no-startup-id xfce4-screenshooter
 #
 # kill focused window
 bindsym $alt+F4 kill
 bindsym $alt+f exec --no-startup-id thunar
-bindsym $alt+Return exec --no-startup-id xfce4-terminal -T mango
+bindsym $alt+Return exec --no-startup-id xfce4-terminal -T MangO
 bindsym $alt+p exec --no-startup-id xfce4-terminal -T mocp -e 'mocp -T transparent-background'
 for_window [title="mocp"] floating enable, border none
+for_window [title="ranger"] floating enable, border none
 #
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run -l 9 -nb '#10101c' -nf '#dddddd' -sb '#444555' -sf '#dddddd' -fn 'Fira Code Medium'
@@ -228,9 +231,10 @@ for_window [title="Light"] floating enable, border none, resize set 1000 850
 for_window [title="Firefox"] floating enable, border none, resize set 1000 850
 for_window [class="Ristretto"] floating enable, resize set 800 640
 for_window [class="Parole.*"] floating enable, border none, resize set 1000 850
-for_window [title="mango"] floating enable, resize set 600 400
+for_window [title="MangO"] floating enable, resize set 600 400
 for_window [class="mpv"] floating enable, resize set 1000 850
 for_window [instance="atril"] floating enable, resize set 800 640
+for_window [instance="zathura"] floating enable, resize set 800 640
 #
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -253,5 +257,5 @@ bar {
 	# mode dock
 	tray_output none
 	position top
-	modifier Mod1
+	# modifier Mod1
 }

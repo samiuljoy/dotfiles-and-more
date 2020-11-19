@@ -1,3 +1,13 @@
+alias ll='ls -l'
+alias la='ls -a'
+alias l='ls -CF'
+alias sl='ls -CF'
+alias lh='ls -lh'
+alias xopen='xdg-open'
+alias hist='history -c'
+alias ..='cd ../'
+alias ...='cd ../..'
+alias v='vi $(fzf)'
 LS_COLORS=$LS_COLORS:'*.py=01;02;38;5;111:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.html=01;02;38;5;209:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.zip=38;5;162:'; export LS_COLORS
