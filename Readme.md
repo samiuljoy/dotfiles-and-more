@@ -78,11 +78,11 @@ a. Increase/Decrease system volume with F9 and F8 and toggle mute with F10
 
 b. Switch between recent work-spaces with alt+tab (work-space auto back and forth is enabled)
 
-c. Default terminal is set to xfce-terminal
+c. Default terminal is set to xfce4-terminal
 
 d. alt+home opens firefox on workspace 2
 
-e. Kill a window with alt+f4
+e. Kill a window with $mod+q
 
 f. alt+f starts thunar file manager in floating mode
 
@@ -92,13 +92,13 @@ h. If you have `moc` music player, hitting alt+p will bring up mocp music player
 
 i. Appearance of `dmenu` has been customized
 
-j. Hitting $mod+q will bring out the exit prompt. Alternatively you can press $mod+shift+q to bring out the old exit prompt
+j. Hitting $mod+shift+e will bring out the exit prompt.
 
-k. Status bar is completely empty and hidden, unless you press alt. I like empty status bar (:
+k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (:
 
 l. focus_follows_mouse is set to false
 
-m. Open applications like thunar light, firefox, parole etc in their customized sizes.
+m. Open applications like thunar light, firefox, parole etc in their customized floating sizes.
 
 n. Take screenshots with <Print> key on your keyboard
 
@@ -130,7 +130,7 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 
 5. If you're using i3wm, replace the config under $HOME/.config/i3/config with the config of this repository. 
 
-6. If you plan on using Mutt, you can replace the muttrc under $HOME/.config/mutt/muttrc with the config on mutt/muttrc of this repository.
+6. If you plan on using Mutt, you can replace the muttrc under $HOME/.config/mutt/muttrc with the config on mutt/muttrc of this repository. I've also included a gruvbox-colorscheme.muttrc for mutt. If you wish to use this colorscheme, you'd have to put that under $HOME/.config/mutt/ as well.
 
 7. Replace the vim colorschemes from vim-colors/ to /usr/share/vim/vim\*/colors/
 
@@ -140,4 +140,4 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 
 ### Automatic setup
 
-Just run this script. Clone the repo, cd into dotfiles-and-more/ and run setup.sh. Some of the steps require you to have administrative privilege and is left for you to install manually.
+Clone the repo, cd into dotfiles-and-more/ and run setup.sh. Some of the steps require you to have administrative privilege and is left for you to install manually if setup.sh is not executed as root.
