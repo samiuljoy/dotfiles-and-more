@@ -9,10 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
+# two modifier keys are set, one is super which is the default mod key and the other one is alt key
 set $mod Mod4
 set $alt Mod1
 #
-# Increase or decrease volume with F9 and F8
+# Increase or decrease volume with F9 and F8 and toggle mute with F10
 bindsym F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym F8 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -22,14 +23,16 @@ bindsym F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 #
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 mouse_warping none
+# Exits fullscreen if any pop-up appears
 popup_during_fullscreen leave_fullscreen
 focus_on_window_activation urgent
+# With workspace auto back and forth, you can switch between two recent workspaces with the same key
 workspace_auto_back_and_forth yes
 #
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
+# Default font is set to Fira Code Medium
 font pango:Fira Code Medium 10
-
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -40,21 +43,26 @@ font pango:Fira Code Medium 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# start a terminal with super+enter
 bindsym $mod+Return exec --no-startup-id xfce4-terminal
+# Execute firefox with mod+Home
 bindsym $mod+Home exec --no-startup-id firefox
-# bindsym $mod+l exec --no-startup-id $HOME/light/light
+# If you happen to have light browser you can execute it with mod+l
+bindsym $mod+l exec --no-startup-id $HOME/light/light
+# Start ranger with alt+g
 bindsym $alt+g exec xfce4-terminal -T ranger -e ranger
 # bindsym $alt+F2 exec --no-startup-id xfce4-appfinder -c
+# if you have xfce4-screenshooter, you can press Print key and it'll prompt you for a screenshoot
 bindsym Print exec --no-startup-id xfce4-screenshooter
 #
 # kill focused window
 bindsym $mod+q kill
+# Startup thunar with alt+f
 bindsym $alt+f exec --no-startup-id thunar
+# Start a mini terminal window with alt+enter
 bindsym $alt+Return exec --no-startup-id xfce4-terminal -T MangO
+# If you have mocp music player installed, you can start that up with alt+p
 bindsym $alt+p exec --no-startup-id xfce4-terminal -T mocp -e 'mocp -T transparent-background'
-for_window [title="mocp"] floating enable, border none
-for_window [title="ranger"] floating enable, border none
 #
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run -l 9 -nb '#10101c' -nf '#dddddd' -sb '#444555' -sf '#dddddd' -fn 'Fira Code Medium'
@@ -142,7 +150,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 #
-# Alternatively switch between workspace 1 and 2 with alt+tab
+# Alternatively switch between workspace x and 2 with alt+tab. Here, x stands for any workspace other than workspace 2
 bindsym $alt+Tab workspace $ws2
 # bindsym $mod+Tab workspace $ws1
 #
@@ -223,9 +231,10 @@ focus_follows_mouse no
 assign [class="Light"] 2
 assign [class="Firefox"] 2
 #
-# This is thunar window class test section
-#
-for_window [class="."] border pixel 2
+# Window properties for different applications
+for_window [title="mocp"] floating enable, border none
+for_window [title="ranger"] floating enable, border none
+for_window [class=".*"] border pixel 2
 for_window [class="Thunar"] floating enable, resize set 600 400
 for_window [title="Light"] floating enable, resize set 1000 850
 for_window [title="Firefox"] floating enable, border none, resize set 1000 850
