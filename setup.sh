@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "\n\t\t\t\t>>>>>> Welcome! Ready to try out my dotfiles? <<<<<<"
 echo "\nYou could either download the required packages automatically with this installation which would require you to have root privilege, or you could run the installer as a non-root user."
 echo
@@ -88,7 +89,16 @@ echo "\n\nFor gtk settings"
 echo "\nYou probably need to replace the gtk settings from this directory under gtk-3.0/settings.ini to your $HOME/.config/gtk-3.0/settings.ini"
 echo "\nNote that these gtk configs are for gtk-3.0, if you have gtk-version other than 3.0, might have to google a bit, I would suggest Arch wiki."
 echo "It's better if you copied the settings.ini yourself."
-
+echo
+read -p "Also, would you like to install some packages I use as well [ y or n ] " bonus
+case "$bonus" in
+	"y") sh bonus.sh
+		;;
+	"n") echo "\nSkipping bonus package installation"
+		;;
+	*) echo "Invalid input"
+		;;
+esac
 sleep 0.5
 echo "\n\nSettings complete I guess. Do a reboot to see changes."
 echo "\n\t\t\t\t>>>>>>>> I appreciate you trying out my dotfiles. Hopefully you'll end up liking it (: <<<<<<<<"

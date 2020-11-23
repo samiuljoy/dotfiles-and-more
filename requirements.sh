@@ -1,14 +1,14 @@
+#!/bin/bash
 if [ $(id -u) = 0 ]; then
 	echo "Seems like you are root, well, below is a list of packages that will be downloaded"
 	echo "\n\t1. Vim"
 	echo "\n\t2. Xfce4-terminal"
 	echo "\n\t3. i3"
-	echo "\n\t4. Mutt email client"
-	echo "\n\t5. Font Fira Code"
+	echo "\n\t4. Font Fira Code"
 	echo
-	echo "\nChose number/s followed by spaces, say if you wish to install vim and i3, but not xfce4-terminal, mutt and fira code font, you would type in 1 s 3 s s. s stands for skip"
+	echo "\nChose number/s followed by spaces, say if you wish to install vim and i3, but not xfce4-terminal and fira code font, you would type in 1 s 3 s. s stands for skip"
 	echo
-	read -p "Chose applications to install" vimm xfterminal iwind muttt firaa
+	read -p "Chose applications to install " vimm xfterminal iwind muttt firaa
 	case "$vimm" in
 		"1") if [ $(which vim) = "/usr/bin/vim" ]; then
 			echo "\nVim seems to be already installed on your system, great!, skipping vim installation"
@@ -54,20 +54,20 @@ if [ $(id -u) = 0 ]; then
 			;;
 	esac
 	
-	case "$muttt" in
-		"4") if [ $(which mutt) = "/usr/bin/mutt" ]; then
-			echo "\nMutt seems to be already installed on your system, great!, skipping mutt installation"
-		else
-			echo "Installing Mutt"
-			apt install mutt
-		fi
-			;;
-		"s") echo "\nSkipping mutt installation"
-			;;
-		*) echo "Invalid input, exiting"
-			exit 1
-			;;
-	esac
+# 	case "$muttt" in
+# 		"4") if [ $(which mutt) = "/usr/bin/mutt" ]; then
+# 			echo "\nMutt seems to be already installed on your system, great!, skipping mutt installation"
+# 		else
+# 			echo "Installing Mutt"
+# 			apt install mutt
+# 		fi
+# 			;;
+# 		"s") echo "\nSkipping mutt installation"
+# 			;;
+# 		*) echo "Invalid input, exiting"
+# 			exit 1
+# 			;;
+# 	esac
 
 case "$firaa" in
 		"4") if [ $(ls /usr/share/font* | grep -i fira | sed 's/://g' ) = "/usr/share/fonts-firacode" ]; then

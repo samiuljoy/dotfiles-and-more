@@ -217,8 +217,8 @@ bindsym $mod+r mode "resize"
 # colors
 #
 client.focused              #bf616a #2f343f #778899 #bf616a #778899
-client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.focused_inactive     #2f343f #4f2f2d #d8dee8 #2f343f #4f2f2d
+client.unfocused            #2f343f #4f2f2d #d8dee8 #2f343f #4f2f2d
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
@@ -227,21 +227,21 @@ client.background           #2f343f
 #
 focus_follows_mouse no
 #
-# Assigning workspace 2 to light
+# Assigning workspace 2 to Light and Firefox
 assign [class="Light"] 2
 assign [class="Firefox"] 2
 #
 # Window properties for different applications
-for_window [title="mocp"] floating enable, border none
-for_window [title="ranger"] floating enable, border none
-for_window [class=".*"] border pixel 2
+for_window [class="."] border pixel 2
+for_window [title="mocp"] floating enable
+for_window [title="ranger"] floating enable
 for_window [class="Thunar"] floating enable, resize set 600 400
 for_window [title="Light"] floating enable, resize set 1000 850
 for_window [title="Firefox"] floating enable, border none, resize set 1000 850
 for_window [class="Ristretto"] floating enable, resize set 800 640
-for_window [class="Parole.*"] floating enable, border none, resize set 1000 850
+for_window [class="Parole.*"] floating enable, border pixel 1, resize set 1000 850
 for_window [title="MangO"] floating enable, resize set 600 400
-for_window [class="mpv"] floating enable, resize set 1000 850
+for_window [class="mpv"] floating enable, border pixel 1, resize set 1000 850
 for_window [instance="atril"] floating enable, resize set 800 640
 for_window [instance="zathura"] floating enable, resize set 800 640
 #
