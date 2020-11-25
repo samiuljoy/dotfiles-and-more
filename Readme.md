@@ -96,7 +96,7 @@ i. Appearance of `dmenu` has been customized
 
 j. Hitting $mod+shift+e will bring out the exit prompt.
 
-k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (: Also, to check the time, press keys alt+F4
+k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (: Also, to check the time, press keys super+F4
 
 l. focus_follows_mouse is set to false
 
