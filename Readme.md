@@ -44,6 +44,8 @@ Pretty basic and minimalist configs.
 
 9. **Debian Joy Theme wallpapers included under joy-theme-debian** 
 
+10. **bonus.sh** = If you wish to download some packages I use on a daily basis, they are included in bonus.sh script. You can run it with either by running setup.sh or running it manually from your shell
+
 ### In `.vimrc`
 
 I'm using pathogen as my plugin manager. Using this vimrc, you get;
@@ -94,7 +96,7 @@ i. Appearance of `dmenu` has been customized
 
 j. Hitting $mod+shift+e will bring out the exit prompt.
 
-k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (:
+k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (: Also, to check the time, press keys alt+F4
 
 l. focus_follows_mouse is set to false
 

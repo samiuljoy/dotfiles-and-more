@@ -103,7 +103,7 @@ if [ $(id -u) = 0 ]; then
 				esac
 			fi
 			;;
-		"s") echo "\Skipping Ulight Browser"
+		"s") echo "\nSkipping Ulight Browser"
 			;;
 		*) echo "\nInvalid input"
 			;;
