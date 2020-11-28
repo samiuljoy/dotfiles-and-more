@@ -76,7 +76,7 @@ If you're using i3, font's by default don't have antialiased and hinting enabled
 
 **Default $mod key is set to Super**
 
-a. Increase/Decrease system volume with F9 and F8 and toggle mute with F10
+a. Increase/Decrease system volume with F9 and F8 and toggle mute with F10. It'll also show a mini notification of volume levels
 
 b. Switch between recent work-spaces with alt+tab (work-space auto back and forth is enabled)
 
@@ -96,7 +96,7 @@ i. Appearance of `dmenu` has been customized
 
 j. Hitting $mod+shift+e will bring out the exit prompt.
 
-k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (: Also, to check the time, press keys super+F4
+k. Status bar is completely empty and hidden. Press alt to see an empty status bar. I like empty status bar (: [Also, to check the time, press keys super+F4 and to check temperatures type in super+F3]
 
 l. focus_follows_mouse is set to false
 
