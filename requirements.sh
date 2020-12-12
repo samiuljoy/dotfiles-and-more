@@ -19,8 +19,7 @@ if [ $(id -u) = 0 ]; then
 			;;
 		"s") echo "\nSkipping vim installation"
 			;;
-		*) echo "Invalid input, exiting"
-			exit 1
+		*) echo "Invalid input, skipping vim installation continuing rest of the setup though..."
 			;;
 	esac
 
@@ -34,7 +33,7 @@ if [ $(id -u) = 0 ]; then
 			;;
 		"s") echo "\nSkipping xfce4-terminal installation"
 			;;
-		*) echo "Invalid input, exiting"
+		*) echo "Invalid input, skipping xfce4-terminal setup, continuing rest of the setup though..."
 			exit 1
 			;;
 	esac
@@ -49,27 +48,12 @@ if [ $(id -u) = 0 ]; then
 			;;
 		"s") echo "\nSkipping i3 installation"
 			;;
-		*) echo "Invalid input, exiting"
+		*) echo "Invalid input, skipping i3 window manager setup, continuing rest of the setup though..."
 			exit 1
 			;;
 	esac
 	
-# 	case "$muttt" in
-# 		"4") if [ $(which mutt) = "/usr/bin/mutt" ]; then
-# 			echo "\nMutt seems to be already installed on your system, great!, skipping mutt installation"
-# 		else
-# 			echo "Installing Mutt"
-# 			apt install mutt
-# 		fi
-# 			;;
-# 		"s") echo "\nSkipping mutt installation"
-# 			;;
-# 		*) echo "Invalid input, exiting"
-# 			exit 1
-# 			;;
-# 	esac
-
-case "$firaa" in
+	case "$firaa" in
 		"4") if [ $(ls /usr/share/font* | grep -i fira | sed 's/://g' ) = "/usr/share/fonts-firacode" ]; then
 			echo "\nFira Code font family seems to be already installed on your system, great!, skipping font installation"
 		else
@@ -79,7 +63,7 @@ case "$firaa" in
 			;;
 		"s") echo "\nSkipping fonts-firacode installation"
 			;;
-		*) echo "Invalid input, exiting"
+		*) echo "Invalid input, skipping fonts-firacode setup, continuing rest of the setup though..."
 			exit 1
 			;;
 	esac

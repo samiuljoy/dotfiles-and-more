@@ -80,7 +80,7 @@ vim_col() {
 				chmod 0755 vim-colors/*
 				echo "\nCopying vim colors to /usr/share/vim/vim*/colors/"
 				cp vim-colors/* /usr/share/vim/vim*/colors/
-				if [ $? == 0 ]; then
+				if [ $? = 0 ]; then
 					echo "\nVim colors copied successfully"
 				else
 					echo "\nSomething went wrong while copying vim colors to /us"
@@ -114,7 +114,7 @@ xfce_setup() {
 		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
 		case "$xfrcon" in
 			"y") cat xfce4/terminalrc > $HOME/.config/xfce4/terminal/terminalrc
-				if [ $? == 0 ]; then
+				if [ $? = 0 ]; then
 					echo "\nTerminalrc replaced successfully"
 				else
 					echo "Something went wrong while replacing terminalrc"
@@ -130,7 +130,7 @@ xfce_setup() {
 			chmod 0755 xfce4/xfce4-colors/*
 			echo "\nCopying xfce4-colors"
 			cp xfce4/xfce4-colors/* /usr/share/xfce4/terminal/colorschemes/
-			if [ $? == 0 ]; then
+			if [ $? = 0 ]; then
 				echo "\nColors successfully copied"
 			else
 				echo "\nSomething went wrong...continuing rest of the setup though"
@@ -151,7 +151,7 @@ i3_config() {
 	if [ $(which i3) = "/usr/bin/i3" ]; then
 		if [ -f "$HOME/.config/i3/config" ]; then
 			echo
-			read -p "A config file for i3 already exist on your home $HOME/.config/i3/config, do you want to replace it? [y or n] " iwm
+			read -p "A config file for i3 already exist on your home $HOME/.config/i3/config, do you want to replace it with the new one? [y or n] " iwm
 			case "$iwm" in
 				"y") cat i3/config > $HOME/.config/i3/config
 					echo "\ni3 configs replaced"

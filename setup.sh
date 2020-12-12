@@ -12,7 +12,11 @@ case "$rootorno" in
 		;;
 	"nonroot") echo "\nRunning this installer as a non-root user"
 		;;
+	"*") echo "\nInvalid key pressed, exiting setup..."
+		exit 1
+		;;
 esac
+
 sleep 0.5
 echo "\nProceeding forward..."
 cur_dir="$(dirname "$0")"
@@ -22,11 +26,10 @@ echo "\n\n\tChose your preferred config/s"
 echo "\n\t1. vimrc config"
 echo "\n\t2. bashrc config"
 echo "\n\t3. copy vim colors"
-echo "\n\t4 mutt email client config"
-echo "\n\t5. xfce4-terminal colorscheme setup"
-echo "\n\t6. i3 config setup"
+echo "\n\t4. xfce4-terminal colorscheme setup"
+echo "\n\t5. i3 config setup"
 echo
-echo "\nChose any number of options followed by spaces, for eg; to set up vimrc bashrc i3 you would have to type 1 2 s s s 6. Here s stands for skip."
+echo "\nChose any number of options followed by spaces, for eg; to set up vimrc, bashrc and i3 you would have to type 1 2 s s 5. Here s stands for skip."
 echo
 read -p "Enter your number sequence: " vimrc baashrc vcolors email xfcec iwm
 
@@ -57,17 +60,8 @@ case "$vcolors" in
 		;;
 esac
 
-case "$email" in
-	"4") mutt_setup
-		;;
-	"s") echo "\nskipping mutt config setup"
-		;;
-	*) echo "\nInvalid number, continuing rest of the setup..."
-		;;
-esac
-
 case "$xfcec" in
-	"5") xfce_setup
+	"4") xfce_setup
 		;;
 	"s") echo "\nskipping xfce terminal color setup"
 		;;
@@ -76,7 +70,7 @@ case "$xfcec" in
 esac
 
 case "$iwm" in
-	"6") i3_config
+	"5") i3_config
 		;;
 	"s") echo "\nskipping i3 config setup"
 		;;
