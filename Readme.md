@@ -30,9 +30,9 @@ Pretty basic and minimalist configs.
 
 2. **.bashrc** = Personalized bashrc configuration
 
-3. **gtk-3.0/settings.ini** = Slightly modified gtk-settings for i3wm
+3. **gtk-3.0/settings.ini** = Slightly modified gtk-settings for i3 window manager
 
-4. **i3/config** = Personalized i3wm config
+4. **i3/config** = Personalized i3 window manager config
 
 5. **mutt/muttrc** = Mutt email client configs
 
@@ -48,19 +48,19 @@ Pretty basic and minimalist configs.
 
 ### In `.vimrc`
 
-I'm using pathogen as my plugin manager. Using this vimrc, you get;
+Using this vimrc, you get;
 
-a. Default Vim colorschme is set to substrata(remember to copy vim-colors/substrata.vim to /usr/share/vim/vim\*/colors/)
+a. Default Vim colorscheme is set to substrata (remember to copy vim-colors/substrata.vim to /usr/share/vim/vim\*/colors/)
 
-c. Turn on spell check with spy(in escape mode) and turn off spell check using spn(in esc mode)
+b. Turn on spell check with spy(in command mode) and turn off spell check using spn(in command mode)
 
-d. Spell check is turned on automatically for markdown files or files having `.md` extension and default colorschme for markdown files is set to miramare
+c. Spell check is turned on automatically for markdown files or files having `.md` extension and default colorscheme for markdown files is set to miramare
 
-e. Page down with space
+d. Page down with space
 
-f. Miscellaneous: syntax is enabled, laststatus is set to 0, termguicolors is enabled, noswapfile is set, background is set to dark, relativenumber and numbers are on, and cursorline in set to true, which highlights the line you're currently on.
+e. Miscellaneous: syntax is enabled, laststatus is set to 0, termguicolors is enabled, noswapfile is set, background is set to dark, relativenumber and numbers are on, and cursorline in set to true, which highlights the line you're currently on.
 
-g. Although optional, if you're not using w and q for their defined actions, you can map them to save and quit, just uncomment line 5 and 6, save vimrc. Now, you can exit vim with q and save with w. Easy as that.
+f. Although optional, if you're not using w and q for their defined actions, you can map them to save and quit, just uncomment line 5 and 6, save vimrc. Now, you can exit vim with q and save with w. Easy as that.
 
 ### Stuffs in `.bashrc and bash_aliases`
 
@@ -70,7 +70,7 @@ b. A cs function at the end. Type in `cs directory` and it'll cd to that directo
 
 ### In gtk-3.0/
 
-If you're using i3, font's by default don't have antialiased and hinting enabled and gui applications open in default bright themes, hence, to enable dark colorschme and antialising and hinting, these settings have been included. You'll have to manually place the settings under $HOME/.config/gtk-3.0/settings.ini.
+If you're using i3, font's by default don't have antialiased and hinting enabled and gui applications open in default bright themes, hence, to enable dark colorscheme and antialising and hinting, these settings have been included. You'll have to manually place the settings under $HOME/.config/gtk-3.0/settings.ini.
 
 ### Stuffs in `i3/config`
 
@@ -106,7 +106,7 @@ n. Take screenshots with <Print> key on your keyboard
 
 ### Stuffs in `$HOME.config/mutt/muttrc`
 
-Mutt is an email client. Make sure to lock store your password in a different file and encrypt it with gpg key. There's also a gruvbox colorschme included.
+Mutt is an email client. Make sure to lock store your password in a different file and encrypt it with gpg key. There's also a gruvbox colorscheme included.
 
 ### Custom colorschemes for vim
 
@@ -116,7 +116,7 @@ This here are some custom colorschemes for vim. Gruvbox, Substrata, Iceberg, Mir
 
 Fira Code Medium is the font I'm currently using.
 
-### Xfce4-terminal colorschme
+### Xfce4-terminal colorscheme
 
 Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up using Nord. The colorschemes are under xfce4/xfce4-colors/
 
@@ -128,9 +128,9 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 
 3. Replace the bashrc and bash_aliases with the .bashrc and .bash_aliases on your home directory.
 
-4. Place the gtk-3.0/settings.settings.ini on $HOME/.config/gtk-3.0/settings.ini. 
+4. Place the gtk-3.0/settings.ini on $HOME/.config/gtk-3.0/settings.ini. 
 
-5. If you're using i3wm, replace the config under $HOME/.config/i3/config with the config of this repository. 
+5. If you're using i3 window manager, replace the config under $HOME/.config/i3/config with the config of this repository. 
 
 6. If you plan on using Mutt, you can replace the muttrc under $HOME/.config/mutt/muttrc with the config on mutt/muttrc of this repository. I've also included a gruvbox-colorscheme.muttrc for mutt. If you wish to use this colorscheme, you'd have to put that under $HOME/.config/mutt/ as well.
 
@@ -143,3 +143,5 @@ Gruvbox and Nord are two colorschemes I switch back and forth. I mostly end up u
 ### Automatic setup
 
 Clone the repo, cd into dotfiles-and-more/ and run setup.sh. Some of the steps require you to have administrative privilege and is left for you to install manually if setup.sh is not executed as root.
+
+***Godspeed... (:***
