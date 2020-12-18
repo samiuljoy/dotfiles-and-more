@@ -1,6 +1,7 @@
 vimrc_setup() {
 	echo "\n\tConfiguring vimrc setup"
-	if [ $(which vim) = "/usr/bin/vim" ]; then
+	which vim
+	if [ $? = 0 ]; then
 		if [ -f "$HOME/.vimrc" ]; then
 			echo
 			read -p ".vimrc already exist on your home directory, do you want to replace it? [y or n] " vimrc
@@ -29,7 +30,7 @@ vimrc_setup() {
 			esac
 		fi
 	else
-		echo "\nvim isn't installed on your system, install vim with apt install vim"
+		echo "\nvim isn't installed on your system, install vim with apt install vim, .vimrc isn't copied and left for you to manually copy"
 	fi
 sleep 1
 }
@@ -38,7 +39,8 @@ sleep 1
 bashrc_setup() {
 	echo "\n\tConfiguring bashrc"
 	sleep 0.5
-	if [ $(which bash) = "/usr/bin/bash" ]; then
+	which bash
+	if [ $? = 0 ]; then
 		if [ -f "$HOME/.bashrc" ]; then
 			echo
 			read -p ".bashrc already exist on your home directory, do you want to replace it? [y or n] " bashrc
@@ -74,7 +76,8 @@ sleep 1
 
 
 vim_col() {
-	if [ $(which vim) = "/usr/bin/vim" ]; then
+	which vim
+	if [ $? = 0 ]; then
 		echo "\nConfiguring vim colors"
 			if [ $(id -u) = 0 ]; then
 				chmod 0755 vim-colors/*
@@ -83,7 +86,7 @@ vim_col() {
 				if [ $? = 0 ]; then
 					echo "\nVim colors copied successfully"
 				else
-					echo "\nSomething went wrong while copying vim colors to /us"
+					echo "\nSomething went wrong while copying vim colors"
 				fi
 				echo "\nColors successfully copied"
 			else
@@ -95,21 +98,23 @@ vim_col() {
 	fi
 sleep 0.5
 }
-
-mutt_setup() {
-	echo "\n\tA note about muttrc setup"
-	if [ $(which mutt) = "/usr/bin/mutt" ]; then
-		echo "\nLooks like you have mutt installed on your system, feel free to replace the muttrc configs manually. Mutt configs are stored under mutt/muttrc"
-	else
-		echo "\nLooks like Mutt email client is not installed on your system, you can install mutt with sudo apt install mutt."
-	fi
-sleep 0.5
-}
-
+# 
+# mutt_setup() {
+# 	echo "\n\tA note about muttrc setup"
+# 	which mutt
+# 	if [ $? = 0 ]; then
+# 		echo "\nLooks like you have mutt installed on your system, feel free to replace the muttrc configs manually. Mutt configs are stored under mutt/muttrc"
+# 	else
+# 		echo "\nLooks like Mutt email client is not installed on your system, you can install mutt with apt install mutt."
+# 	fi
+# sleep 0.5
+# }
+# 
 
 xfce_setup() {
 	echo "\n\tConfiguring xfce4-terminal setup"
-	if [ $(which xfce4-terminal) = "/usr/bin/xfce4-terminal" ]; then
+	which xfce4-terminal
+	if [ $? =0 ]; then
 		echo
 		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
 		case "$xfrcon" in
@@ -140,7 +145,7 @@ xfce_setup() {
 			echo "\nYou need to copy the colorschmes for xfce4-terminal manually from xfce4-colors/ to /usr/share/xfce4/terminal/colorschemes/ because root privilege is needed for modifying system files" 
 		fi
 	else
-		echo "\nXfce4-terminal is not installed on your system"
+		echo "\nXfce4-terminal is not installed on your system, you can install xfce4-terminal with apt install xfce4-terminal"
 	fi
 sleep 0.5
 }
@@ -148,7 +153,8 @@ sleep 0.5
 
 i3_config() {
 	echo "\n\tConfiguring i3wm"
-	if [ $(which i3) = "/usr/bin/i3" ]; then
+	which i3
+	if [ $? = 0 ]; then
 		if [ -f "$HOME/.config/i3/config" ]; then
 			echo
 			read -p "A config file for i3 already exist on your home $HOME/.config/i3/config, do you want to replace it with the new one? [y or n] " iwm

@@ -31,7 +31,7 @@ echo "\n\t5. i3 config setup"
 echo
 echo "\nChose any number of options followed by spaces, for eg; to set up vimrc, bashrc and i3 you would have to type 1 2 s s 5. Here s stands for skip."
 echo
-read -p "Enter your number sequence: " vimrc baashrc vcolors email xfcec iwm
+read -p "Enter your number sequence: " vimrc baashrc vcolors xfcec iwm
 
 case "$vimrc" in
 	"1") vimrc_setup

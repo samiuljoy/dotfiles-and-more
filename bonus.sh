@@ -14,7 +14,8 @@ if [ $(id -u) = 0 ]; then
 	read -p "Chose applications to install " muttt mocpp mpvv raanger ulightt zaathura feehh
 
 	case "$muttt" in
-		"1") if [ $(which mutt) = "/usr/bin/mutt" ]; then
+		"1") which mutt
+			if [ $? = 0 ]; then
 			echo "\nMutt seems to be already installed on your system, great!, skipping mutt installation"
 		else
 			echo "Installing Mutt"
@@ -28,7 +29,8 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$mocpp" in
-		"2") if [ $(which mocp) = "/usr/bin/mocp" ]; then
+		"2") which mocp
+			if [ $? = 0 ]; then
 			echo "\nMocp seems to be already installed on your system, great!, skipping mocp installation"
 		else
 			echo "Installing mocp music player"
@@ -42,7 +44,8 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$mpvv" in
-		"3") if [ $(which mpv) = "/usr/bin/mpv" ]; then
+		"3") which mpv
+			if [ $? = 0 ]; then
 			echo "\nMpv seems to be already installed on your system, great!, skipping mpv installation"
 		else
 			echo "Installing mpv media player"
@@ -56,7 +59,8 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$raanger" in
-		"4") if [ $(which ranger) = "/usr/bin/ranger" ]; then
+		"4") which raanger
+			if [ $? = 0 ]; then
 			echo "\nRanger seems to be already installed on your system, great!, skipping ranger installation"
 		else
 			echo "Installing Ranger file manager"
@@ -71,7 +75,8 @@ if [ $(id -u) = 0 ]; then
 	
 	case "$ulightt" in
 		"5") echo "\nPreparing Ulight browser setup"
-			if [ $(which git) = "/usr/bin/git" ]; then
+			which git
+			if [ $? = 0 ]; then
 				echo "\nGit seems to be installed on your system, clonning Ulight from https://github.com/samiuljoy/ulight.git"
 				git clone https://github.com/samiuljoy/ulight.git
 				chown -R $USER:$USER ulight
@@ -107,7 +112,8 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$zaathura" in
-		"6") if [ $(which zathura) = "/usr/bin/zathura" ]; then
+		"6") which zathura
+			if [ $? = 0 ]; then
 			echo "\nGreat! Zathura seems to be installed on your system, skipping zathura installation"
 		else
 			echo "\nInstalling zathura pdf viewer"
@@ -121,7 +127,8 @@ if [ $(id -u) = 0 ]; then
 	esac
 		
 	case "$feehh" in
-		"7") if [ $(which feh) = "/usr/bin/feh" ]; then
+		"7") which feh
+			if [ $? = 0 ]; then
 			echo "\nFeh seems to be already installed on your system, great!, skipping Feh installation"
 		else
 			echo "\nInstalling Feh"
