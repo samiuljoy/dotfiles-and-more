@@ -114,7 +114,7 @@ sleep 0.5
 xfce_setup() {
 	echo "\n\tConfiguring xfce4-terminal setup"
 	which xfce4-terminal
-	if [ $? =0 ]; then
+	if [ $? = 0 ]; then
 		echo
 		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
 		case "$xfrcon" in
