@@ -1,12 +1,19 @@
-" execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set termguicolors
-" map q :q<ENTER>
-" map w :w<ENTER>
+map q :q<ENTER>
+map w :w<ENTER>
+" set clipboard+=unnamed
+" set go+=a
+" set pastetoggle=<F2>
+" set clipboard=unnamedplus
 " colo miramare
 " colo camo
-colo substrata
+colo iceberg
+set cursorline
+set number
+set relativenumber
+" colo substrata
 " colo gruvbox
 set ls=0
 set mouse=a
@@ -18,10 +25,10 @@ map spn :setlocal nospell
 " the window size is set to 16, you can change that as your heart desires.
 " :let g:NERDTreeWinSize=30
 " let NERDTreeShowHidden=1
-:nnoremap <C-n> :NERDTreeToggle<CR>
+" :nnoremap <C-n> :NERDTreeToggle<CR>
 " sets the colorscheme to gruvbox material and turns on spell check whenever
 " you open a .md file
-autocmd BufEnter *.md colorscheme miramare
+autocmd BufEnter *.md colorscheme gruvbox
 autocmd BufEnter *.md setlocal spell spelllang=en_us
 " autocmd BufEnter *.css set tabstop=2
 " autocmd BufEnter *.css set shiftwidth=2
