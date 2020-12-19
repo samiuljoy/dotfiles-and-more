@@ -1,6 +1,6 @@
 vimrc_setup() {
 	echo "\n\tConfiguring vimrc setup"
-	which vim
+	which vim > /dev/null
 	if [ $? = 0 ]; then
 		if [ -f "$HOME/.vimrc" ]; then
 			echo
@@ -39,7 +39,7 @@ sleep 1
 bashrc_setup() {
 	echo "\n\tConfiguring bashrc"
 	sleep 0.5
-	which bash
+	which bash > /dev/null
 	if [ $? = 0 ]; then
 		if [ -f "$HOME/.bashrc" ]; then
 			echo
@@ -76,7 +76,7 @@ sleep 1
 
 
 vim_col() {
-	which vim
+	which vim > /dev/null
 	if [ $? = 0 ]; then
 		echo "\nConfiguring vim colors"
 			if [ $(id -u) = 0 ]; then
@@ -113,7 +113,7 @@ sleep 0.5
 
 xfce_setup() {
 	echo "\n\tConfiguring xfce4-terminal setup"
-	which xfce4-terminal
+	which xfce4-terminal > /dev/null
 	if [ $? = 0 ]; then
 		echo
 		read -p "Do you want to replace your terminalrc config with mine? [y or n] " xfrcon
@@ -153,7 +153,7 @@ sleep 0.5
 
 i3_config() {
 	echo "\n\tConfiguring i3wm"
-	which i3
+	which i3 > /dev/null
 	if [ $? = 0 ]; then
 		if [ -f "$HOME/.config/i3/config" ]; then
 			echo

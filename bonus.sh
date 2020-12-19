@@ -14,7 +14,7 @@ if [ $(id -u) = 0 ]; then
 	read -p "Chose applications to install " muttt mocpp mpvv raanger ulightt zaathura feehh
 
 	case "$muttt" in
-		"1") which mutt
+		"1") which mutt >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nMutt seems to be already installed on your system, great!, skipping mutt installation"
 		else
@@ -29,7 +29,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$mocpp" in
-		"2") which mocp
+		"2") which mocp >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nMocp seems to be already installed on your system, great!, skipping mocp installation"
 		else
@@ -44,7 +44,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$mpvv" in
-		"3") which mpv
+		"3") which mpv >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nMpv seems to be already installed on your system, great!, skipping mpv installation"
 		else
@@ -59,7 +59,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$raanger" in
-		"4") which raanger
+		"4") which raanger >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nRanger seems to be already installed on your system, great!, skipping ranger installation"
 		else
@@ -75,7 +75,7 @@ if [ $(id -u) = 0 ]; then
 	
 	case "$ulightt" in
 		"5") echo "\nPreparing Ulight browser setup"
-			which git
+			which git >/dev/null
 			if [ $? = 0 ]; then
 				echo "\nGit seems to be installed on your system, clonning Ulight from https://github.com/samiuljoy/ulight.git"
 				git clone https://github.com/samiuljoy/ulight.git
@@ -112,7 +112,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$zaathura" in
-		"6") which zathura
+		"6") which zathura >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nGreat! Zathura seems to be installed on your system, skipping zathura installation"
 		else
@@ -127,7 +127,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 		
 	case "$feehh" in
-		"7") which feh
+		"7") which feh >/dev/null
 			if [ $? = 0 ]; then
 			echo "\nFeh seems to be already installed on your system, great!, skipping Feh installation"
 		else

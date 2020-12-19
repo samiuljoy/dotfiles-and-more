@@ -10,7 +10,7 @@ if [ $(id -u) = 0 ]; then
 	echo
 	read -p "Chose applications to install " vimm xfterminal iwind firaa
 	case "$vimm" in
-		"1") which vim
+		"1") which vim > /dev/null
 			if [ $? = 0 ]; then
 			echo "\nVim seems to be already installed on your system, great!, skipping vim installation"
 		else
@@ -25,7 +25,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$xfterminal" in
-		"2") which xfce4-terminal
+		"2") which xfce4-terminal > /dev/null
 			if [ $? = 0 ]; then
 			echo "\nXfce4-terminal seems to be already installed on your system, great!, skipping xfce4-terminal installation"
 		else
@@ -40,7 +40,7 @@ if [ $(id -u) = 0 ]; then
 	esac
 
 	case "$iwind" in
-		"3") which i3
+		"3") which i3 > /dev/null
 			if [ $? = 0 ]; then
 			echo "\nI3 window manager seems to be already installed on your system, great!, skipping i3 installation"
 		else
