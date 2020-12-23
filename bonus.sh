@@ -8,10 +8,11 @@ if [ $(id -u) = 0 ]; then
 	echo "\n\t5. Ulight, a lightweight web browser"
 	echo "\n\t6. Zathura, a pdf viewer"
 	echo "\n\t7. Feh image viewer"
+	echo "\n\t8. Fuzzy finder fzf"
 	echo
-	echo "\nChose number/s followed by spaces, say if you wish to install Mutt, Mocp, Mpv, but not Ranger, Ulight, Zathura, and Feh, you'd have to type in 1 2 3 s s s s. s stands for skip"
+	echo "\nChose number/s followed by spaces, say if you wish to install Mutt, Mocp, Mpv, and fzf but not Ranger, Ulight, Zathura, and Feh, you'd have to type in 1 2 3 s s s s 8. s stands for skip"
 	echo
-	read -p "Chose applications to install " muttt mocpp mpvv raanger ulightt zaathura feehh
+	read -p "Chose applications to install " muttt mocpp mpvv raanger ulightt zaathura feehh fzff
 
 	case "$muttt" in
 		"1") which mutt >/dev/null
@@ -138,6 +139,21 @@ if [ $(id -u) = 0 ]; then
 		"s") echo "\nSkipping feh installation"
 			;;
 		*) echo "Invalid input, continuing setup..."
+			;;
+	esac
+
+	case "$fzff" in
+		"8") which fzf >/dev/null
+			if [ $? = 0 ]; then
+			echo "\nFzf seems to be already installed on your system, great!, skipping Fzf installation"
+		else
+			echo "\nInstalling Fzf"
+			apt install fzf
+		fi
+			;;
+		"s") echo "\nSkipping fzf installation"
+			;;
+		*) echo "Invalid input, continuing rest of the setup though..."
 			;;
 	esac
 else

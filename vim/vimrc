@@ -1,19 +1,29 @@
+" execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set termguicolors
 map q :q<ENTER>
 map w :w<ENTER>
+set relativenumber
+set number
+set wildmenu
+set ruler
 " set clipboard+=unnamed
 " set go+=a
 " set pastetoggle=<F2>
 " set clipboard=unnamedplus
 " colo miramare
 " colo camo
+" Show empty tab lines
+" For quick searches
+set incsearch
+set list
+set listchars=tab:●-
+" For suckless terminal to work properly with termguicolors, the following 2
+" lines are needed
+let &t_8f = "\<ESC>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<ESC>[48;2;%lu;%lu;%lum"
 colo iceberg
-set cursorline
-set number
-set relativenumber
-" colo substrata
 " colo gruvbox
 set ls=0
 set mouse=a
@@ -25,13 +35,12 @@ map spn :setlocal nospell
 " the window size is set to 16, you can change that as your heart desires.
 " :let g:NERDTreeWinSize=30
 " let NERDTreeShowHidden=1
-" :nnoremap <C-n> :NERDTreeToggle<CR>
+:nnoremap <C-n> :NERDTreeToggle<CR>
 " sets the colorscheme to gruvbox material and turns on spell check whenever
 " you open a .md file
-autocmd BufEnter *.md colorscheme gruvbox
+autocmd BufEnter *.md colorscheme gruvbox-material
 autocmd BufEnter *.md setlocal spell spelllang=en_us
 " autocmd BufEnter *.css set tabstop=2
 " autocmd BufEnter *.css set shiftwidth=2
 " autocmd BufEnter *.html set tabstop=2
 " autocmd BufEnter *.html set shiftwidth=2
-set noswapfile
