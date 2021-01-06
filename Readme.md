@@ -146,4 +146,4 @@ Clone the repo, cd into dotfiles-and-more/ and run setup.sh. Some of the steps r
 
 ***Godspeed... (:***
 
-Feel free to support at [bitcoin] 13erq7DDXDuqqBohht3UNyuJCXtpJcWGSe
+Feel free to support with [bitcoin] 13erq7DDXDuqqBohht3UNyuJCXtpJcWGSe
