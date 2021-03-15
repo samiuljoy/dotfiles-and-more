@@ -98,6 +98,7 @@ vim_col() {
 	fi
 sleep 0.5
 }
+
 # 
 # mutt_setup() {
 # 	echo "\n\tA note about muttrc setup"
